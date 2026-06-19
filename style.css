@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Input row */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#task-input:focus {
+  border-color: #667eea;
+}
+
+#add-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #667eea;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#add-btn:hover {
+  background-color: #5a6fd6;
+}
+
+/* Task list */
+#task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  transition: opacity 0.2s;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #667eea;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Task label */
+.task-item label {
+  flex: 1;
+  font-size: 1rem;
+  color: #4a5568;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.task-item.completed label {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+/* Delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #fc8181;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: #e53e3e;
+}
+
+/* Empty state */
+#empty-message {
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
