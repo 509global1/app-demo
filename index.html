@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,12 +20,24 @@
           placeholder="Add a new task..."
           maxlength="100"
         />
+        <div class="datetime-row">
+          <div class="datetime-field">
+            <label for="due-date">Due date</label>
+            <input type="date" id="due-date" />
+          </div>
+          <div class="datetime-field">
+            <label for="due-time">Due time</label>
+            <input type="time" id="due-time" />
+          </div>
+        </div>
         <button id="add-btn">Add</button>
       </div>
 
       <ul id="task-list"></ul>
 
       <p id="empty-message">No tasks yet. Add one above!</p>
+
+      <button id="clear-btn">Clear all tasks</button>
     </div>
 
     <script src="script.js"></script>
